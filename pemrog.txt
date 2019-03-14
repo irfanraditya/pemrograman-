@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv) {
+	int data[50]={1,23,11,2,13,4,14,5,15,6,16,7,17,8,18,9,19,10,20,31,40,32,42,33,41,34,42,35,43,36,44,37,45,38,46,39,47,48,50,49,21,26,22,25,23,29,27,30,28,24};
+	int tampung;
+	int a;
+	int b;
+	cout<<"DATA ACAK SEBELUM DI URUT\n\n";
+	for(a=1;a<50;a++){
+		cout<<data[a-1]<<" ";
+	}
+	for(a=1;a<50;a++){
+		for(b=1;b<50;b++){
+			if(data[b+1]<data[b]){
+				data[b]=tampung;
+				tampung=data[b+1];
+				data[b+1]=data[b];
+			}
+		}
+	}cout<<"\n\nDATA YANG SUDAH DI URUT\n\n";
+	for(int d=1;d<=50;d++){
+		cout<<data[a]<<" ";
+	}
+	return 0;
+}
+
